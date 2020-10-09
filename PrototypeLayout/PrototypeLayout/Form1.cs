@@ -184,6 +184,7 @@ namespace PrototypeLayout
         {
             labelRecordsTitleType.Text = "Running";
             PopulateRecordsList("Running");
+            listBoxRecords.Refresh();
             panelRecordExerciseType.Hide();
             panelRecordList.Show();
         }
@@ -192,6 +193,7 @@ namespace PrototypeLayout
         {
             labelRecordsTitleType.Text = "Cycling";
             PopulateRecordsList("Cycling");
+            listBoxRecords.Refresh();
             panelRecordExerciseType.Hide();
             panelRecordList.Show();
         }
@@ -200,6 +202,7 @@ namespace PrototypeLayout
         {
             labelRecordsTitleType.Text = "Rowing";
             PopulateRecordsList("Rowing");
+            listBoxRecords.Refresh();
             panelRecordExerciseType.Hide();
             panelRecordList.Show();
         }
@@ -208,6 +211,7 @@ namespace PrototypeLayout
         {
             labelRecordsTitleType.Text = "All";
             PopulateRecordsList("All");
+            listBoxRecords.Refresh();
             panelRecordExerciseType.Hide();
             panelRecordList.Show();
         }
@@ -273,8 +277,19 @@ namespace PrototypeLayout
 
         private void buttonRecordInformationBack_Click(object sender, EventArgs e)
         {
+            listBoxRecords.Refresh();
             panelRecordInformation.Hide();
             panelRecordList.Show();
+        }
+
+        private void panelRecordExerciseType_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelRecordExerciseTypeInformation_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

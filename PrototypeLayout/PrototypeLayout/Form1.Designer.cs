@@ -75,6 +75,10 @@
             this.buttonRecordsBack = new System.Windows.Forms.Button();
             this.labelRecordsTitle = new System.Windows.Forms.Label();
             this.panelRecordInformation = new System.Windows.Forms.Panel();
+            this.labelRecordSpeedInformation = new System.Windows.Forms.Label();
+            this.labelRecordDistanceInformation = new System.Windows.Forms.Label();
+            this.labelRecordDurationInformation = new System.Windows.Forms.Label();
+            this.labelRecordExerciseTypeInformation = new System.Windows.Forms.Label();
             this.buttonRecordInformationBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,10 +90,6 @@
             this.labelRecordDuration = new System.Windows.Forms.Label();
             this.labelRecordTypeofExercise = new System.Windows.Forms.Label();
             this.labelRecordInformationTitle = new System.Windows.Forms.Label();
-            this.labelRecordExerciseTypeInformation = new System.Windows.Forms.Label();
-            this.labelRecordDurationInformation = new System.Windows.Forms.Label();
-            this.labelRecordDistanceInformation = new System.Windows.Forms.Label();
-            this.labelRecordSpeedInformation = new System.Windows.Forms.Label();
             this.panelDashboard.SuspendLayout();
             this.panelNews.SuspendLayout();
             this.panelFitnessFunctionality.SuspendLayout();
@@ -336,6 +336,7 @@
             this.panelRecordExerciseType.Name = "panelRecordExerciseType";
             this.panelRecordExerciseType.Size = new System.Drawing.Size(462, 668);
             this.panelRecordExerciseType.TabIndex = 7;
+            this.panelRecordExerciseType.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRecordExerciseType_Paint);
             // 
             // buttonRecordExerciseTypeBack
             // 
@@ -611,6 +612,47 @@
             this.panelRecordInformation.Size = new System.Drawing.Size(462, 668);
             this.panelRecordInformation.TabIndex = 12;
             // 
+            // labelRecordSpeedInformation
+            // 
+            this.labelRecordSpeedInformation.AutoSize = true;
+            this.labelRecordSpeedInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecordSpeedInformation.Location = new System.Drawing.Point(192, 196);
+            this.labelRecordSpeedInformation.Name = "labelRecordSpeedInformation";
+            this.labelRecordSpeedInformation.Size = new System.Drawing.Size(20, 24);
+            this.labelRecordSpeedInformation.TabIndex = 15;
+            this.labelRecordSpeedInformation.Text = "0";
+            // 
+            // labelRecordDistanceInformation
+            // 
+            this.labelRecordDistanceInformation.AutoSize = true;
+            this.labelRecordDistanceInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecordDistanceInformation.Location = new System.Drawing.Point(215, 156);
+            this.labelRecordDistanceInformation.Name = "labelRecordDistanceInformation";
+            this.labelRecordDistanceInformation.Size = new System.Drawing.Size(20, 24);
+            this.labelRecordDistanceInformation.TabIndex = 14;
+            this.labelRecordDistanceInformation.Text = "0";
+            // 
+            // labelRecordDurationInformation
+            // 
+            this.labelRecordDurationInformation.AutoSize = true;
+            this.labelRecordDurationInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecordDurationInformation.Location = new System.Drawing.Point(130, 120);
+            this.labelRecordDurationInformation.Name = "labelRecordDurationInformation";
+            this.labelRecordDurationInformation.Size = new System.Drawing.Size(20, 24);
+            this.labelRecordDurationInformation.TabIndex = 13;
+            this.labelRecordDurationInformation.Text = "0";
+            // 
+            // labelRecordExerciseTypeInformation
+            // 
+            this.labelRecordExerciseTypeInformation.AutoSize = true;
+            this.labelRecordExerciseTypeInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecordExerciseTypeInformation.Location = new System.Drawing.Point(202, 81);
+            this.labelRecordExerciseTypeInformation.Name = "labelRecordExerciseTypeInformation";
+            this.labelRecordExerciseTypeInformation.Size = new System.Drawing.Size(20, 24);
+            this.labelRecordExerciseTypeInformation.TabIndex = 12;
+            this.labelRecordExerciseTypeInformation.Text = "0";
+            this.labelRecordExerciseTypeInformation.Click += new System.EventHandler(this.labelRecordExerciseTypeInformation_Click);
+            // 
             // buttonRecordInformationBack
             // 
             this.buttonRecordInformationBack.Location = new System.Drawing.Point(13, 18);
@@ -714,46 +756,6 @@
             this.labelRecordInformationTitle.Size = new System.Drawing.Size(209, 31);
             this.labelRecordInformationTitle.TabIndex = 1;
             this.labelRecordInformationTitle.Text = "Current Session";
-            // 
-            // labelRecordExerciseTypeInformation
-            // 
-            this.labelRecordExerciseTypeInformation.AutoSize = true;
-            this.labelRecordExerciseTypeInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecordExerciseTypeInformation.Location = new System.Drawing.Point(202, 81);
-            this.labelRecordExerciseTypeInformation.Name = "labelRecordExerciseTypeInformation";
-            this.labelRecordExerciseTypeInformation.Size = new System.Drawing.Size(20, 24);
-            this.labelRecordExerciseTypeInformation.TabIndex = 12;
-            this.labelRecordExerciseTypeInformation.Text = "1";
-            // 
-            // labelRecordDurationInformation
-            // 
-            this.labelRecordDurationInformation.AutoSize = true;
-            this.labelRecordDurationInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecordDurationInformation.Location = new System.Drawing.Point(130, 120);
-            this.labelRecordDurationInformation.Name = "labelRecordDurationInformation";
-            this.labelRecordDurationInformation.Size = new System.Drawing.Size(20, 24);
-            this.labelRecordDurationInformation.TabIndex = 13;
-            this.labelRecordDurationInformation.Text = "1";
-            // 
-            // labelRecordDistanceInformation
-            // 
-            this.labelRecordDistanceInformation.AutoSize = true;
-            this.labelRecordDistanceInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecordDistanceInformation.Location = new System.Drawing.Point(215, 156);
-            this.labelRecordDistanceInformation.Name = "labelRecordDistanceInformation";
-            this.labelRecordDistanceInformation.Size = new System.Drawing.Size(20, 24);
-            this.labelRecordDistanceInformation.TabIndex = 14;
-            this.labelRecordDistanceInformation.Text = "1";
-            // 
-            // labelRecordSpeedInformation
-            // 
-            this.labelRecordSpeedInformation.AutoSize = true;
-            this.labelRecordSpeedInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecordSpeedInformation.Location = new System.Drawing.Point(192, 196);
-            this.labelRecordSpeedInformation.Name = "labelRecordSpeedInformation";
-            this.labelRecordSpeedInformation.Size = new System.Drawing.Size(20, 24);
-            this.labelRecordSpeedInformation.TabIndex = 15;
-            this.labelRecordSpeedInformation.Text = "1";
             // 
             // Dashboard
             // 
