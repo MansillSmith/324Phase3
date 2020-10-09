@@ -1,0 +1,10 @@
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\bin\Debug\PrototypeLayout.exe.config
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\bin\Debug\PrototypeLayout.exe
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\bin\Debug\PrototypeLayout.pdb
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.csprojAssemblyReference.cache
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.Dashboard.resources
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.Properties.Resources.resources
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.csproj.GenerateResource.cache
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.csproj.CoreCompileInputs.cache
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.exe
+D:\Uni 2020\COMPX324\Phase3\324Phase3\PrototypeLayout\PrototypeLayout\obj\Debug\PrototypeLayout.pdb
