@@ -44,7 +44,6 @@
             this.labelFitnessFunctionalityTitle = new System.Windows.Forms.Label();
             this.panelSessionExerciseType = new System.Windows.Forms.Panel();
             this.buttonSessionExerciseTypeBack = new System.Windows.Forms.Button();
-            this.buttonAddNewExercise = new System.Windows.Forms.Button();
             this.buttonSessionRowing = new System.Windows.Forms.Button();
             this.buttonSessionCycling = new System.Windows.Forms.Button();
             this.buttonSessionRunning = new System.Windows.Forms.Button();
@@ -63,7 +62,7 @@
             this.labelCurrentSessionDuration = new System.Windows.Forms.Label();
             this.labelCurrentSessionExercise = new System.Windows.Forms.Label();
             this.buttonStop = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMap = new System.Windows.Forms.PictureBox();
             this.labelCurrentSessionSpeedTitle = new System.Windows.Forms.Label();
             this.labelCurrentSessionDistanceTitle = new System.Windows.Forms.Label();
             this.labelCurrentSessionDurationTitle = new System.Windows.Forms.Label();
@@ -90,16 +89,25 @@
             this.labelRecordDuration = new System.Windows.Forms.Label();
             this.labelRecordTypeofExercise = new System.Windows.Forms.Label();
             this.labelRecordInformationTitle = new System.Windows.Forms.Label();
+            this.panelNewsArticle = new System.Windows.Forms.Panel();
+            this.buttonNewsArticleBack = new System.Windows.Forms.Button();
+            this.labelNewsArticleTitle = new System.Windows.Forms.Label();
+            this.textBoxNewsArticleOne = new System.Windows.Forms.TextBox();
+            this.textBoxNewsArticleTwo = new System.Windows.Forms.TextBox();
+            this.pictureBoxArticle = new System.Windows.Forms.PictureBox();
+            this.textBoxNewsArticleApproval = new System.Windows.Forms.TextBox();
             this.panelDashboard.SuspendLayout();
             this.panelNews.SuspendLayout();
             this.panelFitnessFunctionality.SuspendLayout();
             this.panelSessionExerciseType.SuspendLayout();
             this.panelRecordExerciseType.SuspendLayout();
             this.panelCurrentSession.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).BeginInit();
             this.panelRecordList.SuspendLayout();
             this.panelRecordInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelNewsArticle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDashboard
@@ -108,7 +116,7 @@
             this.panelDashboard.Controls.Add(this.buttonNews);
             this.panelDashboard.Controls.Add(this.buttonFitness);
             this.panelDashboard.Controls.Add(this.labelDashboardTitle);
-            this.panelDashboard.Location = new System.Drawing.Point(12, 2);
+            this.panelDashboard.Location = new System.Drawing.Point(3, 2);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(462, 668);
             this.panelDashboard.TabIndex = 1;
@@ -171,10 +179,12 @@
             this.textBoxNewsArticle2.Location = new System.Drawing.Point(27, 300);
             this.textBoxNewsArticle2.Multiline = true;
             this.textBoxNewsArticle2.Name = "textBoxNewsArticle2";
+            this.textBoxNewsArticle2.ReadOnly = true;
             this.textBoxNewsArticle2.Size = new System.Drawing.Size(402, 191);
             this.textBoxNewsArticle2.TabIndex = 4;
             this.textBoxNewsArticle2.Text = "Title: Article 2\r\nSummary: This is a summary of the second article\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r" +
     "\nApproval: User 2, User 3, User 4";
+            this.textBoxNewsArticle2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxNewsArticle2_MouseClick);
             // 
             // textBoxNewsArticle1
             // 
@@ -182,10 +192,12 @@
             this.textBoxNewsArticle1.Location = new System.Drawing.Point(27, 69);
             this.textBoxNewsArticle1.Multiline = true;
             this.textBoxNewsArticle1.Name = "textBoxNewsArticle1";
+            this.textBoxNewsArticle1.ReadOnly = true;
             this.textBoxNewsArticle1.Size = new System.Drawing.Size(402, 191);
             this.textBoxNewsArticle1.TabIndex = 3;
             this.textBoxNewsArticle1.Text = "Title: Article 1\r\nSummary: This is a summary of the first article\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" +
     "Approval: User 1, User 2, User 3";
+            this.textBoxNewsArticle1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxNewsArticle1_MouseClick);
             this.textBoxNewsArticle1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labelNewsTitle
@@ -254,7 +266,6 @@
             // 
             this.panelSessionExerciseType.BackColor = System.Drawing.Color.White;
             this.panelSessionExerciseType.Controls.Add(this.buttonSessionExerciseTypeBack);
-            this.panelSessionExerciseType.Controls.Add(this.buttonAddNewExercise);
             this.panelSessionExerciseType.Controls.Add(this.buttonSessionRowing);
             this.panelSessionExerciseType.Controls.Add(this.buttonSessionCycling);
             this.panelSessionExerciseType.Controls.Add(this.buttonSessionRunning);
@@ -273,15 +284,6 @@
             this.buttonSessionExerciseTypeBack.Text = "Back";
             this.buttonSessionExerciseTypeBack.UseVisualStyleBackColor = true;
             this.buttonSessionExerciseTypeBack.Click += new System.EventHandler(this.buttonSessionExerciseTypeBack_Click);
-            // 
-            // buttonAddNewExercise
-            // 
-            this.buttonAddNewExercise.Location = new System.Drawing.Point(255, 239);
-            this.buttonAddNewExercise.Name = "buttonAddNewExercise";
-            this.buttonAddNewExercise.Size = new System.Drawing.Size(145, 106);
-            this.buttonAddNewExercise.TabIndex = 5;
-            this.buttonAddNewExercise.Text = "Add New Exercise";
-            this.buttonAddNewExercise.UseVisualStyleBackColor = true;
             // 
             // buttonSessionRowing
             // 
@@ -407,7 +409,7 @@
             this.panelCurrentSession.Controls.Add(this.labelCurrentSessionDuration);
             this.panelCurrentSession.Controls.Add(this.labelCurrentSessionExercise);
             this.panelCurrentSession.Controls.Add(this.buttonStop);
-            this.panelCurrentSession.Controls.Add(this.pictureBox1);
+            this.panelCurrentSession.Controls.Add(this.pictureBoxMap);
             this.panelCurrentSession.Controls.Add(this.labelCurrentSessionSpeedTitle);
             this.panelCurrentSession.Controls.Add(this.labelCurrentSessionDistanceTitle);
             this.panelCurrentSession.Controls.Add(this.labelCurrentSessionDurationTitle);
@@ -477,13 +479,13 @@
             this.buttonStop.UseVisualStyleBackColor = false;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
-            // pictureBox1
+            // pictureBoxMap
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(43, 264);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 247);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxMap.Location = new System.Drawing.Point(43, 264);
+            this.pictureBoxMap.Name = "pictureBoxMap";
+            this.pictureBoxMap.Size = new System.Drawing.Size(384, 247);
+            this.pictureBoxMap.TabIndex = 6;
+            this.pictureBoxMap.TabStop = false;
             // 
             // labelCurrentSessionSpeedTitle
             // 
@@ -757,11 +759,87 @@
             this.labelRecordInformationTitle.TabIndex = 1;
             this.labelRecordInformationTitle.Text = "Current Session";
             // 
+            // panelNewsArticle
+            // 
+            this.panelNewsArticle.BackColor = System.Drawing.Color.White;
+            this.panelNewsArticle.Controls.Add(this.textBoxNewsArticleApproval);
+            this.panelNewsArticle.Controls.Add(this.pictureBoxArticle);
+            this.panelNewsArticle.Controls.Add(this.textBoxNewsArticleTwo);
+            this.panelNewsArticle.Controls.Add(this.textBoxNewsArticleOne);
+            this.panelNewsArticle.Controls.Add(this.buttonNewsArticleBack);
+            this.panelNewsArticle.Controls.Add(this.labelNewsArticleTitle);
+            this.panelNewsArticle.Location = new System.Drawing.Point(1884, 2);
+            this.panelNewsArticle.Name = "panelNewsArticle";
+            this.panelNewsArticle.Size = new System.Drawing.Size(462, 668);
+            this.panelNewsArticle.TabIndex = 16;
+            // 
+            // buttonNewsArticleBack
+            // 
+            this.buttonNewsArticleBack.Location = new System.Drawing.Point(13, 18);
+            this.buttonNewsArticleBack.Name = "buttonNewsArticleBack";
+            this.buttonNewsArticleBack.Size = new System.Drawing.Size(45, 23);
+            this.buttonNewsArticleBack.TabIndex = 11;
+            this.buttonNewsArticleBack.Text = "Back";
+            this.buttonNewsArticleBack.UseVisualStyleBackColor = true;
+            this.buttonNewsArticleBack.Click += new System.EventHandler(this.buttonNewsArticleBack_Click);
+            // 
+            // labelNewsArticleTitle
+            // 
+            this.labelNewsArticleTitle.AutoSize = true;
+            this.labelNewsArticleTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNewsArticleTitle.Location = new System.Drawing.Point(110, 10);
+            this.labelNewsArticleTitle.Name = "labelNewsArticleTitle";
+            this.labelNewsArticleTitle.Size = new System.Drawing.Size(209, 31);
+            this.labelNewsArticleTitle.TabIndex = 1;
+            this.labelNewsArticleTitle.Text = "Current Session";
+            // 
+            // textBoxNewsArticleOne
+            // 
+            this.textBoxNewsArticleOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNewsArticleOne.Location = new System.Drawing.Point(13, 81);
+            this.textBoxNewsArticleOne.Multiline = true;
+            this.textBoxNewsArticleOne.Name = "textBoxNewsArticleOne";
+            this.textBoxNewsArticleOne.ReadOnly = true;
+            this.textBoxNewsArticleOne.Size = new System.Drawing.Size(219, 248);
+            this.textBoxNewsArticleOne.TabIndex = 12;
+            this.textBoxNewsArticleOne.Text = "Contents: This is the full contents of the news article";
+            // 
+            // textBoxNewsArticleTwo
+            // 
+            this.textBoxNewsArticleTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNewsArticleTwo.Location = new System.Drawing.Point(13, 325);
+            this.textBoxNewsArticleTwo.Multiline = true;
+            this.textBoxNewsArticleTwo.Name = "textBoxNewsArticleTwo";
+            this.textBoxNewsArticleTwo.ReadOnly = true;
+            this.textBoxNewsArticleTwo.Size = new System.Drawing.Size(426, 281);
+            this.textBoxNewsArticleTwo.TabIndex = 13;
+            this.textBoxNewsArticleTwo.Text = "This is the contents of the news article continued...";
+            // 
+            // pictureBoxArticle
+            // 
+            this.pictureBoxArticle.Location = new System.Drawing.Point(238, 80);
+            this.pictureBoxArticle.Name = "pictureBoxArticle";
+            this.pictureBoxArticle.Size = new System.Drawing.Size(201, 239);
+            this.pictureBoxArticle.TabIndex = 14;
+            this.pictureBoxArticle.TabStop = false;
+            // 
+            // textBoxNewsArticleApproval
+            // 
+            this.textBoxNewsArticleApproval.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNewsArticleApproval.Location = new System.Drawing.Point(13, 613);
+            this.textBoxNewsArticleApproval.Multiline = true;
+            this.textBoxNewsArticleApproval.Name = "textBoxNewsArticleApproval";
+            this.textBoxNewsArticleApproval.ReadOnly = true;
+            this.textBoxNewsArticleApproval.Size = new System.Drawing.Size(426, 39);
+            this.textBoxNewsArticleApproval.TabIndex = 15;
+            this.textBoxNewsArticleApproval.Text = "Approval:";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2008, 1363);
+            this.ClientSize = new System.Drawing.Size(469, 672);
+            this.Controls.Add(this.panelNewsArticle);
             this.Controls.Add(this.panelRecordInformation);
             this.Controls.Add(this.panelRecordList);
             this.Controls.Add(this.panelCurrentSession);
@@ -784,12 +862,15 @@
             this.panelRecordExerciseType.PerformLayout();
             this.panelCurrentSession.ResumeLayout(false);
             this.panelCurrentSession.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).EndInit();
             this.panelRecordList.ResumeLayout(false);
             this.panelRecordList.PerformLayout();
             this.panelRecordInformation.ResumeLayout(false);
             this.panelRecordInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelNewsArticle.ResumeLayout(false);
+            this.panelNewsArticle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -809,7 +890,6 @@
         private System.Windows.Forms.Button buttonRecordSession;
         private System.Windows.Forms.Label labelFitnessFunctionalityTitle;
         private System.Windows.Forms.Panel panelSessionExerciseType;
-        private System.Windows.Forms.Button buttonAddNewExercise;
         private System.Windows.Forms.Button buttonSessionRowing;
         private System.Windows.Forms.Button buttonSessionCycling;
         private System.Windows.Forms.Button buttonSessionRunning;
@@ -826,7 +906,7 @@
         private System.Windows.Forms.Label labelCurrentSessionDuration;
         private System.Windows.Forms.Label labelCurrentSessionExercise;
         private System.Windows.Forms.Button buttonStop;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMap;
         private System.Windows.Forms.Label labelCurrentSessionSpeedTitle;
         private System.Windows.Forms.Label labelCurrentSessionDistanceTitle;
         private System.Windows.Forms.Label labelCurrentSessionDurationTitle;
@@ -858,6 +938,13 @@
         private System.Windows.Forms.Label labelRecordDistanceInformation;
         private System.Windows.Forms.Label labelRecordDurationInformation;
         private System.Windows.Forms.Label labelRecordExerciseTypeInformation;
+        private System.Windows.Forms.Panel panelNewsArticle;
+        private System.Windows.Forms.PictureBox pictureBoxArticle;
+        private System.Windows.Forms.TextBox textBoxNewsArticleTwo;
+        private System.Windows.Forms.TextBox textBoxNewsArticleOne;
+        private System.Windows.Forms.Button buttonNewsArticleBack;
+        private System.Windows.Forms.Label labelNewsArticleTitle;
+        private System.Windows.Forms.TextBox textBoxNewsArticleApproval;
     }
 }
 

@@ -60,6 +60,16 @@ namespace PrototypeLayout
             panelRecordExerciseType.Hide();
             panelRecordList.Hide();
             panelRecordInformation.Hide();
+            panelNewsArticle.Hide();
+
+            panelNews.Location = panelDashboard.Location;
+            panelFitnessFunctionality.Location = panelDashboard.Location;
+            panelSessionExerciseType.Location = panelDashboard.Location;
+            panelCurrentSession.Location = panelDashboard.Location;
+            panelRecordExerciseType.Location = panelDashboard.Location;
+            panelRecordList.Location = panelDashboard.Location;
+            panelRecordInformation.Location = panelDashboard.Location;
+            panelNewsArticle.Location = panelDashboard.Location;
         }
 
         private void buttonRecordSession_Click(object sender, EventArgs e)
@@ -290,6 +300,28 @@ namespace PrototypeLayout
         private void labelRecordExerciseTypeInformation_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxNewsArticle1_MouseClick(object sender, MouseEventArgs e)
+        {
+            labelNewsArticleTitle.Text = "Article One";
+            textBoxNewsArticleApproval.Text = "Approval: User 1, User 2, User 3";
+            panelNews.Hide();
+            panelNewsArticle.Show();
+        }
+
+        private void textBoxNewsArticle2_MouseClick(object sender, MouseEventArgs e)
+        {
+            labelNewsArticleTitle.Text = "Article Two";
+            textBoxNewsArticleApproval.Text = "Approval: User 2, User 3, User 4";
+            panelNews.Hide();
+            panelNewsArticle.Show();
+        }
+
+        private void buttonNewsArticleBack_Click(object sender, EventArgs e)
+        {
+            panelNewsArticle.Hide();
+            panelNews.Show();
         }
     }
 }
